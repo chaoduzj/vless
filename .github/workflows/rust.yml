@@ -1,0 +1,22 @@
+名字: Rust
+
+on:
+  push:
+    分支: [ "main" ]
+  pull_request:
+    分支: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - 名字: Build
+      run: cargo build --verbose
+    - 名字: Run tests
+      run: cargo test --verbose
